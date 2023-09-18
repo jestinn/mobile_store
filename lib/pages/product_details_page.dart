@@ -19,6 +19,8 @@ class ProductDetailsPage extends StatelessWidget {
           children: [
             CarouselSlider.builder(
               options: CarouselOptions(
+                autoPlay: true,
+                autoPlayAnimationDuration: Duration(seconds: 1),
                 aspectRatio: 2.0,
                 enlargeCenterPage: false,
                 viewportFraction: 1,

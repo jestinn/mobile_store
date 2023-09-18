@@ -53,22 +53,29 @@ class SearchDelegateWidget extends SearchDelegate<Product> {
               leading: CircleAvatar(
                 radius: 30,
                 backgroundImage: NetworkImage(
-                  suggestions1[i].thumbnail ??
+                  suggestions[i].thumbnail ??
                       "https://images.unsplash.com/photo-1489389944381-3471b5b30f04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
                 ),
               ),
               title: Text(
-                suggestions1[i].title ?? "",
+                suggestions[i].title ?? "",
                 style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
+                    color: Colors.black),
+              ),
+              subtitle: Text(
+                suggestions[i].description ?? "",
+                style: const TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
                     color: Colors.black),
               ),
               onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) =>
-                      ProductDetailsPage(product: suggestions1[i]),
+                      ProductDetailsPage(product: suggestions[i]),
                 ),
               ),
             ));
@@ -89,12 +96,12 @@ class SearchDelegateWidget extends SearchDelegate<Product> {
               leading: CircleAvatar(
                 radius: 30,
                 backgroundImage: NetworkImage(
-                  suggestions1[i].thumbnail ??
+                  suggestions[i].thumbnail ??
                       "https://images.unsplash.com/photo-1489389944381-3471b5b30f04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
                 ),
               ),
               title: Text(
-                suggestions1[i].title ?? "",
+                suggestions[i].title ?? "",
                 style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
@@ -104,7 +111,7 @@ class SearchDelegateWidget extends SearchDelegate<Product> {
                 context,
                 MaterialPageRoute(
                   builder: (context) =>
-                      ProductDetailsPage(product: suggestions1[i]),
+                      ProductDetailsPage(product: suggestions[i]),
                 ),
               ),
             ));
